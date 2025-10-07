@@ -15,7 +15,7 @@ jobs:
           node-version: '20.x'
       - name: install dependcies
         run: npm install
-        working-directory: 02_Basic_Express_Website/express-website
+        working-directory: ./02_Basic_Express_Website/express-website
       - name: Build project
         run: npm run build
-        working-directory: 02_Basic_Express_Website/express-website
+        working-directory: ./02_Basic_Express_Website/express-website
