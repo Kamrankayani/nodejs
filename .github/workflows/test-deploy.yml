@@ -1,0 +1,21 @@
+name: test-deploy
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/chechout@v4
+      - name: uses node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: install npm
+        run: npm install
+        working-directory: nodejs/sample-node-app
+      - name: build app
+        run: npm run build
+        working-directory: nodejs/sample-node-app
