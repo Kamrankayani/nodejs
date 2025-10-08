@@ -1,23 +1,19 @@
 'use strict';
 
-module.exports = function (grunt) {
-  // Load the plugin
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-
-  // Configure the task
-  grunt.config.set('jshint', {
-    files: [
+module.exports = {
+  all: {
+    src: [
       'Gruntfile.js',
-      'server.js',
       'index.js',
+      'server.js',
       'controllers/**/*.js',
-      'lib/**/*.js',
       'models/**/*.js',
+      'lib/**/*.js',
       'tasks/**/*.js'
-    ],
-    options: {
-      jshintrc: '.jshintrc'
-    }
-  });
+    ]
+  },
+  options: {
+    jshintrc: '.jshintrc'
+  }
 };
 
